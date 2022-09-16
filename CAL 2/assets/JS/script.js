@@ -2,11 +2,17 @@ let previousValue = null
 
 let operation = ''
 
+function sum(n1, n2) {
+    let result = n1 + n2
+    writeToDisplay(result)
+}
+
+
 // AZIONE : SALVARE PRIMO OPERATORE E RESETTARE IL DISPLAY
 function add(){
     previousValue = parseInt(document.getElementById('display').value)
-    document.getElementById('display').value = ''  
-    operation = '+' 
+    document.getElementById('display').value = ''
+    operation = '+'
 }
 
 
@@ -24,10 +30,6 @@ function result() {
     }
 }
 
-function sum(n1, n2) {
-    let result = n1 + n2
-    writeToDisplay(result)
-}
 
 
 function writeToDisplay(string) {
@@ -38,7 +40,7 @@ function writeToDisplay(string) {
 
 function showResult() {
     let result = eval(document.getElementById('display').value)
-    
+
     document.getElementById('display').value = result
 }
 
@@ -54,8 +56,8 @@ function deleteC() {
 }
 
 function calculatePiGrego() {
-    let valueDisplay = parseInt(document.getElementById("display").value)  
-    
+    let valueDisplay = parseInt(document.getElementById("display").value)
+
     document.getElementById("display").value = valueDisplay + Math.PI;
 }
 
@@ -65,12 +67,3 @@ function calculatePiGrego() {
 // function result() {
 //     document.getElementById('display').value = eval(document.getElementById('display').value)
 // }
-
-
-
-
-
-
-
-
-

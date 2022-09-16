@@ -1,5 +1,7 @@
 body {
-    background-color: slategrey;
+    background: rgb(112, 128, 144);
+    background: linear-gradient(to top, rgba(112, 128, 144, 1), rgba(255, 255, 255, 1));
+    background-repeat: no-repeat;
     font-family: sans-serif;
 }
 
@@ -9,7 +11,7 @@ body {
 
 #container {
     width: 259px;
-    background-color: rgb(136, 190, 212);
+    background-color: rgb(100, 139, 155);
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -24,7 +26,7 @@ body {
     font-size: 50px;
     text-align: right;
     color: white;
-    background-color: rgb(136, 190, 212);
+    background-color: rgb(100, 139, 155);
     border: none;
 }
 
@@ -41,8 +43,6 @@ body {
     align-items: center;
     padding-top: 5px;
     border-radius: 1px;
-
-
 }
 
 button {
@@ -53,6 +53,8 @@ button {
     border: none;
     background-color: rgb(192, 224, 236);
     margin-bottom: 3px;
+    cursor: pointer;
+
 }
 
 button:hover {
@@ -61,7 +63,7 @@ button:hover {
 }
 
 
-.button-orange {
+.button-heavenly {
     background-color: #57baa7;
 }
 
@@ -82,4 +84,14 @@ p {
     color: white;
     float: right;
     font-size: 10px;
+}
+
+.fa-toggle-off {
+    font-size: 20px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.fa-toggle-off::after {
+    box-shadow: 1px 2px 5px 1px rgb(237, 235, 235);
 }

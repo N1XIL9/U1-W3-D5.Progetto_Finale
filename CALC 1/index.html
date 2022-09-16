@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=s, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/228474511d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/CSS/style.css">
     <title>Document</title>
 
@@ -12,6 +13,10 @@
     
 <div class="cont">
     <div id="container">
+        <div>
+            <i class="fa-solid fa-toggle-off"></i>
+            
+        </div>
         <input type="text" id="display" placeholder="0">
 
         <div id="buttons">
@@ -19,32 +24,32 @@
                 <button onclick="cancelDisplay()" class="font-black-button">AC</button>
                 <button onclick="writeToDisplay('*')" class="font-black-button">x</button>
                 <button onclick="writeToDisplay('%')" class="font-black-button">%</button>
-                <button onclick="writeToDisplay('/')" class="button-orange">÷</button>
+                <button onclick="writeToDisplay('/')" class="button-heavenly">÷</button>
             </div>
             <div>
                 <button onclick="writeToDisplay('7')" class="grey-button">7</button>
                 <button onclick="writeToDisplay('8')" class="grey-button">8</button>
                 <button onclick="writeToDisplay('9')" class="grey-button">9</button>
-                <button onclick="writeToDisplay('+')" class="button-orange">+</button>
+                <button onclick="writeToDisplay('+')" class="button-heavenly">+</button>
 
             <div>
             <div>
                 <button onclick="writeToDisplay('4')" class="grey-button">4</button>
                 <button onclick="writeToDisplay('5')" class="grey-button">5</button>
                 <button onclick="writeToDisplay('6')" class="grey-button">6</button>
-                <button onclick="writeToDisplay('-')" class="button-orange">-</button>
+                <button onclick="writeToDisplay('-')" class="button-heavenly">-</button>
 
             </div>
             <div>
                 <button onclick="writeToDisplay('1')" class="grey-button">1</button>
                 <button onclick="writeToDisplay('2')" class="grey-button">2</button>
                 <button onclick="writeToDisplay('3')" class="grey-button">3</button>
-                <button onclick="addVirgola(',')" class="button-orange">.</button>
+                <button onclick="addVirgola(',')" class="button-heavenly">.</button>
                 
             </div>
             <div>
                 <button onclick="writeToDisplay('0')" class="zerobutton">0</button>
-                <button onclick="operazione()" class="button-orange">=</button>
+                <button onclick="operazione()" class="button-heavenly">=</button>
             </div>
         </div>
     </div>
