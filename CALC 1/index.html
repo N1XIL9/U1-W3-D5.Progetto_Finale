@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/228474511d.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./assets/CSS/style.css">
     <title>Document</title>
@@ -14,8 +14,13 @@
 <div class="cont">
     <div id="container">
         <div>
-            <i class="fa-solid fa-toggle-off"></i>
-            
+            <label onclick="activeButton()" class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label> 
+        
+            <button onclick="calculatePiGrego()" class="invisible-orange">π</button>
+        
         </div>
         <input type="text" id="display" placeholder="0">
 

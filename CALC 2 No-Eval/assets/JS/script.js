@@ -42,16 +42,22 @@ function result() {
         sum(previousValue, secondValue)
         previousValue = null
         operation = ''
+        console.log(previousValue, secondValue)
+
     }else if (operation==='-') {
         let secondValue = parseInt(document.getElementById('display').value)
         sub(previousValue, secondValue)
         previousValue = null
         operation = ''
+        console.log(previousValue, secondValue)
+
     }else if (operation==='*') {
         let secondValue = parseInt(document.getElementById('display').value)
         mult(previousValue, secondValue)
         previousValue = null
         operation = ''
+        console.log(previousValue, secondValue)
+
     }else {
         document.getElementById('display').value = 'Error'
         // alert('no operation found')

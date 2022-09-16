@@ -1,6 +1,6 @@
 body {
     background: rgb(112, 128, 144);
-    background: linear-gradient(to top, rgba(112, 128, 144, 1), rgba(255, 255, 255, 1));
+    background: linear-gradient(rgba(112, 128, 144, 1), rgba(255, 255, 255, 1));
     background-repeat: no-repeat;
     font-family: sans-serif;
 }
@@ -11,12 +11,14 @@ body {
 
 #container {
     width: 259px;
-    background-color: rgb(100, 139, 155);
+    /* background-color: rgb(100, 139, 155); */
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     border: 3px solid rgb(67, 95, 106);
-    box-shadow: 1px 2px 5px 2px black;
+    /* box-shadow: 1px 2px 5px 2px black; */
+    border-radius: 5px;
+    background: linear-gradient(145deg, #ffffff, #fbfbfb);
 }
 
 #display {
@@ -25,15 +27,21 @@ body {
     margin-bottom: 20px;
     font-size: 50px;
     text-align: right;
-    color: white;
-    background-color: rgb(100, 139, 155);
+    color: #323334;
+    background: linear-gradient(145deg, #ffffff00, #ffffff);
+    box-shadow: 20px 20px 60px #ffffff00,
+        -20px -20px 60px #ffffff;
+    /* background-color: rgb(100, 139, 155); */
     border: none;
 }
 
 #display::placeholder {
     float: right;
-    color: white;
+    color: #323334;
 }
+
+
+/* BUTTONS */
 
 #buttons {
     background-color: #323334;
@@ -62,7 +70,6 @@ button:hover {
     transition: 1s;
 }
 
-
 .button-heavenly {
     background-color: #57baa7;
 }
@@ -80,18 +87,72 @@ button:hover {
     color: black;
 }
 
-p {
-    color: white;
-    float: right;
-    font-size: 10px;
-}
+/* TOGGLE SWITCH */
 
-.fa-toggle-off {
-    font-size: 20px;
-    margin-left: 5px;
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 24px;
     margin-top: 5px;
+    margin-left: 3px;
 }
 
-.fa-toggle-off::after {
-    box-shadow: 1px 2px 5px 1px rgb(237, 235, 235);
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 24px;
+    width: 23px;
+    left: 0px;
+    bottom: 0px;
+    background-color: #323334;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #323334;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #323334;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders  */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.invisible-orange {
+
+    align-items: center;
+    margin-top: 10px;
+    margin-left: 5px;
+    height: 29px;
+    width: 35px;
+    margin-top: 4px;
+
 }
