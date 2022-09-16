@@ -7,6 +7,15 @@ function sum(n1, n2) {
     writeToDisplay(result)
 }
 
+function sub(n1, n2) {
+    let result = n1 - n2
+    writeToDisplay(result)
+}
+
+function mult(n1, n2) {
+    let result = n1 * n2
+    writeToDisplay(result)
+}
 
 // AZIONE : SALVARE PRIMO OPERATORE E RESETTARE IL DISPLAY
 function add(){
@@ -15,6 +24,17 @@ function add(){
     operation = '+'
 }
 
+function subtr() {
+    previousValue = parseInt(document.getElementById('display').value)
+    document.getElementById('display').value = ''
+    operation = '-'
+}
+
+function mult () {
+    previousValue = parseInt(document.getElementById('display').value)
+    document.getElementById('display').value = ''
+    operation = '*'
+}
 
 function result() {
     if(operation==='+'){
@@ -23,10 +43,18 @@ function result() {
         previousValue = null
         operation = ''
     }else if (operation==='-') {
-
-    }
-    else {
-        alert('no operation found')
+        let secondValue = parseInt(document.getElementById('display').value)
+        sub(previousValue, secondValue)
+        previousValue = null
+        operation = ''
+    }else if (operation==='*') {
+        let secondValue = parseInt(document.getElementById('display').value)
+        mult(previousValue, secondValue)
+        previousValue = null
+        operation = ''
+    }else {
+        document.getElementById('display').value = 'Error'
+        // alert('no operation found')
     }
 }
 
