@@ -182,3 +182,8 @@ button:hover {
     background-color: #ff5858;
     border-radius: 5px;
 }
+
+.copy {
+    margin: 0 auto;
+    text-align: center;
+}
