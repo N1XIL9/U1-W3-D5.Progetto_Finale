@@ -13,15 +13,17 @@
     
 <div class="cont">
     <div id="container">
-        <div>
-            <label onclick="activeButton()" class="switch">
-                <input type="checkbox">
-                <span class="slider round"></span>
-            </label> 
-        
-            <button onclick="calculatePiGrego()" class="invisible-orange">π</button>
-        
-        </div>
+            <details class="switch">
+                <summary class="slider round"></summary>
+                <button onclick="deleteC()" class="delete-button">C</button>
+                <button onclick="writeToDisplay('\(')" class="button-backets-right">(</button>
+                <button onclick="writeToDisplay('\)')" class="button-backets-left">)</button>
+                <button onclick="calculatePiGrego()" class="invisible-PI">π</button>
+                <button onclick="squareRoot()" class="square-root">√</button>
+                <button onclick="maPower()" class="math-power">^</button>                
+            </details>
+
+
         <input type="text" id="display" placeholder="0">
 
         <div id="buttons">
